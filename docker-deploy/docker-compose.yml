@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  main:
+    build: ./src
+    user: root
+    command: bash -c "make && ./main"
+    volumes:
+      - data-volume:/var/log/erss
+      - ./src:/code
+    ports:
+      - "12345:12345"
+    tty: true
+
+volumes:
+    data-volume:
