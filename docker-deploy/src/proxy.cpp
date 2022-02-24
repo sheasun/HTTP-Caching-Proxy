@@ -17,7 +17,7 @@ void cacheResponse(Cache * cache, string res_str, string uri, int thread_id, Log
         cache->put(uri, res.getResponse());
         string msg, expire = res.getExpires();
         if (expire == "") {
-            msg = to_string(thread_id) + ": cached, but requires re-validation\n";   
+            msg = to_string(thread_id) + ": cached\n";   
         }
         else {
             msg = to_string(thread_id) + ": cached, expires at " + expire + "\n";

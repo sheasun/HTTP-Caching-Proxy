@@ -1,0 +1,11 @@
+Danger log:
+
+1. Met some problems when converting the format of time and date in the response object. In addition, the time difference also should be noticed. We searched many resources on the Internet to learn to parse it. We solved this problem now.
+
+2. The program cannot input the request and response information into the proxy.log properly. We have handled this issue now. 
+
+3. We found an issue that there would be a limit of the thread number. When the proxy runs a period of time which is long enough, the thread number would over the limitation. Thus, we should find a way to handle this situation. However, the issue is not solved until now.
+
+4. In the processGET function, the program should get the information from the cache object, and making decision by it. The logic and code in this function still has some issues. In addition, we still cannot find a method to test this situation.
+
+5. When visiting some kind of websites, the proxy would exit improperly. The terminal showed 'Segmentation Fault'. We add some exception functions in the program to avoid this kind of error.

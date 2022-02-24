@@ -24,19 +24,6 @@ main_1  | 23: cached, but requires re-validation
 main_1  | 22: Received "HTTP/1.1 200 OK" from 198.86.29.20
 main_1  | 22: Responding "HTTP/1.1 200 OK"
 main_1  | 22: cached, but requires re-validation
-main_1  | 13: Tunnel closed
-main_1  | 14: Tunnel closed
-main_1  | 12: Tunnel closed
-main_1  | 16: Tunnel closed
-main_1  | 17: Tunnel closed
-main_1  | 15: Tunnel closed
-main_1  | 9: Tunnel closed
-main_1  | 1: Tunnel closed
-main_1  | 2: Tunnel closed
-main_1  | 24: "CONNECT leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:24 2022
-main_1  | 25: "CONNECT static.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:24 2022
-main_1  | 25: Responding "HTTP/1.1 200 OK"
-main_1  | 24: Responding "HTTP/1.1 200 OK"
 ============
 CONNECT
 ============
@@ -80,6 +67,46 @@ POST
 4: "POST http://httpbin.org/post HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:21:56 2022
 4: Requesting "POST http://httpbin.org/post HTTP/1.1" from 198.86.29.20
 4: Responding "HTTP/1.1 200 OK"
+================================
+not cacheable
+================================
+3: "GET http://www.artsci.utoronto.ca/futurestudents HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:34:32 2022
+3: not in cache
+3: Requesting "GET http://www.artsci.utoronto.ca/futurestudents HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:34:32 2022
+3: Received "HTTP/1.1 301 Moved Permanently" from 0.0.0.0
+3: Responding "HTTP/1.1 301 Moved Permanently"
+3: not cacheable because code 301
+
+32: "GET http://js.player.cntv.cn/creator/swfobject.js HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:26:29 2022
+32: not in cache
+32: Requesting "GET http://js.player.cntv.cn/creator/swfobject.js HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:26:29 2022
+32: Received "HTTP/1.1 200 OK" from 0.0.0.0
+32: Responding "HTTP/1.1 200 OK"
+32: not cacheable because no-store
+
+================================
+cached
+================================
+50: "GET http://www.gov.cn/govweb/xhtml/2016gov/css/common.css HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:40:01 2022
+50: not in cache
+50: Requesting "GET http://www.gov.cn/govweb/xhtml/2016gov/css/common.css HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:40:01 2022
+50: Received "HTTP/1.1 200 OK" from 0.0.0.0
+50: Responding "HTTP/1.1 200 OK"
+50: cached
+
+================================
+in cache, valid
+================================
+53: "GET http://www.gov.cn/govweb/xhtml/2016gov/css/common.css HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:41:17 2022
+53: in cache, valid
+53: Responding "HTTP/1.1 200 OK"
+
+================================
+in cache, requires validation
+================================
+80: "GET http://httpbin.org/forms/post HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:46:27 2022
+80: in cache, requires validation
+80: Responding "HTTP/1.1 200 OK"
 ==============
 chunked
 ==============
@@ -89,7 +116,62 @@ chunked
 5: Received "HTTP/1.1 200 OK" from 198.86.29.20
 5: Responding "HTTP/1.1 200 OK"
 5: not cacheable because no-store
+================================
+malformed request error
+================================
+(no-id): ERROR Malformed request from 0.0.0.0 @ Wed Feb 23 22:35:32 2022
 
+================================
+play music
+================================
+175: "CONNECT p4.music.126.net:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:52:46 2022
+175: Responding "HTTP/1.1 200 OK"
+176: "CONNECT m701.music.126.net:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:52:47 2022
+176: Responding "HTTP/1.1 200 OK"
+177: "CONNECT music.163.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:52:55 2022
+178: "CONNECT s1.music.126.net:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:52:55 2022
+177: Responding "HTTP/1.1 200 OK"
+178: Responding "HTTP/1.1 200 OK"
+
+================================
+play video
+================================
+230: "CONNECT rr3---sn-q4flrnss.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:17 2022
+230: Responding "HTTP/1.1 200 OK"
+231: "CONNECT youtube.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:17 2022
+231: Responding "HTTP/1.1 200 OK"
+232: "CONNECT rr3---sn-q4fl6nl7.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:21 2022
+232: Responding "HTTP/1.1 200 OK"
+233: "CONNECT lh4.googleusercontent.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:21 2022
+233: Responding "HTTP/1.1 200 OK"
+234: "CONNECT pagead2.googlesyndication.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:23 2022
+234: Responding "HTTP/1.1 200 OK"
+235: "CONNECT gateway.icloud.com.cn:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:38 2022
+235: Responding "HTTP/1.1 200 OK"
+236: "CONNECT rr4---sn-q4fl6nss.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
+236: Responding "HTTP/1.1 200 OK"
+237: "CONNECT rr4---sn-q4flrne6.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
+238: "CONNECT tpc.googlesyndication.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
+239: "CONNECT rr4---sn-q4flrn7r.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
+237: Responding "HTTP/1.1 200 OK"
+238: Responding "HTTP/1.1 200 OK"
+240: "CONNECT rr4---sn-q4flrne6.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
+239: Responding "HTTP/1.1 200 OK"
+240: Responding "HTTP/1.1 200 OK"
+241: "CONNECT rr4---sn-q4flrn7r.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
+241: Responding "HTTP/1.1 200 OK"
+
+================================
+post failure error
+================================
+75: "POST http://httpbin.org/post HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:44:15 2022
+75: Requesting "POST http://httpbin.org/post HTTP/1.1" from 0.0.0.0
+75: ERROR POST Failure @ Wed Feb 23 22:45:15 2022
+================================
+connection error
+================================
+(no-id): ERROR cannot get address info for host (p207-quota.icloud.com, 443)
+(no-id): ERROR client exception
 
 
 
