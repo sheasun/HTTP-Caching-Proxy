@@ -1,0 +1,95 @@
+============
+GET
+============
+21: "GET http://ke.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback HTTP/1.1" from 198.          86.29.20 @ Wed Feb 23 21:02:55 2022
+22: "GET http://rlogs.youdao.com/rlog.php?_npid=dictweb&_ncat=pageview&_ncoo=688306722.5669434&_nssn=NULL&_n          ver=1.2.0&_ntms=1645668173795&_nref=&_nurl=http%3A%2F%2Fdict.youdao.com%2F&_nres=1280x720&_nlmf=1645668173&_njve=0&_nc          hr=utf-8&_nfrg=&page=index HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:55 2022
+22: not in cache
+22: Requesting "GET http://rlogs.youdao.com/rlog.php?_npid=dictweb&_ncat=pageview&_ncoo=688306722.5669434&_n          ssn=NULL&_nver=1.2.0&_ntms=1645668173795&_nref=&_nurl=http%3A%2F%2Fdict.youdao.com%2F&_nres=1280x720&_nlmf=1645668173&          _njve=0&_nchr=utf-8&_nfrg=&page=index HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:56 2022
+21: not in cache
+21: Requesting "GET http://ke.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback HTTP/1.1          " from 198.86.29.20 @ Wed Feb 23 21:02:56 2022
+21: Received "HTTP/1.1 200 OK" from 198.86.29.20
+21: Responding "HTTP/1.1 200 OK"
+21: cached, but requires re-validation
+main_1  | 18: not in cache
+main_1  | 18: Requesting "GET http://www.huihui.cn/deals/channel.json?callback=discountCallback HTTP/1.1" from 198.86.          29.20 @ Wed Feb 23 21:02:56 2022
+main_1  | 18: Received "HTTP/1.1 302 Moved Temporarily" from 198.86.29.20
+main_1  | 18: Responding "HTTP/1.1 302 Moved Temporarily"
+main_1  | 18: not cacheable because code 302
+main_1  | 23: "GET http://www.youdao.com/ HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:57 2022
+main_1  | 23: not in cache
+main_1  | 23: Requesting "GET http://www.youdao.com/ HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:57 2022
+main_1  | 23: Received "HTTP/1.1 200 OK" from 198.86.29.20
+main_1  | 23: Responding "HTTP/1.1 200 OK"
+main_1  | 23: cached, but requires re-validation
+main_1  | 22: Received "HTTP/1.1 200 OK" from 198.86.29.20
+main_1  | 22: Responding "HTTP/1.1 200 OK"
+main_1  | 22: cached, but requires re-validation
+main_1  | 13: Tunnel closed
+main_1  | 14: Tunnel closed
+main_1  | 12: Tunnel closed
+main_1  | 16: Tunnel closed
+main_1  | 17: Tunnel closed
+main_1  | 15: Tunnel closed
+main_1  | 9: Tunnel closed
+main_1  | 1: Tunnel closed
+main_1  | 2: Tunnel closed
+main_1  | 24: "CONNECT leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:24 2022
+main_1  | 25: "CONNECT static.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:24 2022
+main_1  | 25: Responding "HTTP/1.1 200 OK"
+main_1  | 24: Responding "HTTP/1.1 200 OK"
+============
+CONNECT
+============
+26: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
+27: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
+28: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
+29: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
+30: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
+31: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
+28: Responding "HTTP/1.1 200 OK"
+26: Responding "HTTP/1.1 200 OK"
+31: Responding "HTTP/1.1 200 OK"
+30: Responding "HTTP/1.1 200 OK"
+29: Responding "HTTP/1.1 200 OK"
+27: Responding "HTTP/1.1 200 OK"
+29: Tunnel closed
+28: Tunnel closed
+29: Tunnel closed
+30: Tunnel closed
+31: Tunnel closed
+32: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
+33: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
+34: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
+35: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
+36: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
+37: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
+36: Responding "HTTP/1.1 200 OK"
+37: Responding "HTTP/1.1 200 OK"
+33: Responding "HTTP/1.1 200 OK"
+32: Responding "HTTP/1.1 200 OK"
+34: Responding "HTTP/1.1 200 OK"
+35: Responding "HTTP/1.1 200 OK"
+32: Tunnel closed
+37: Tunnel closed
+36: Tunnel closed
+33: Tunnel closed
+34: Tunnel closed
+==============
+POST
+==============
+4: "POST http://httpbin.org/post HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:21:56 2022
+4: Requesting "POST http://httpbin.org/post HTTP/1.1" from 198.86.29.20
+4: Responding "HTTP/1.1 200 OK"
+==============
+chunked
+==============
+"GET http://www.httpwatch.com/favicon.ico HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:23:10 2022
+5: not in cache
+5: Requesting "GET http://www.httpwatch.com/favicon.ico HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:23:10 2022
+5: Received "HTTP/1.1 200 OK" from 198.86.29.20
+5: Responding "HTTP/1.1 200 OK"
+5: not cacheable because no-store
+
+
+
+
