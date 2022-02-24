@@ -1,72 +1,41 @@
-============
-GET
-============
-21: "GET http://ke.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback HTTP/1.1" from 198.          86.29.20 @ Wed Feb 23 21:02:55 2022
-22: "GET http://rlogs.youdao.com/rlog.php?_npid=dictweb&_ncat=pageview&_ncoo=688306722.5669434&_nssn=NULL&_n          ver=1.2.0&_ntms=1645668173795&_nref=&_nurl=http%3A%2F%2Fdict.youdao.com%2F&_nres=1280x720&_nlmf=1645668173&_njve=0&_nc          hr=utf-8&_nfrg=&page=index HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:55 2022
-22: not in cache
-22: Requesting "GET http://rlogs.youdao.com/rlog.php?_npid=dictweb&_ncat=pageview&_ncoo=688306722.5669434&_n          ssn=NULL&_nver=1.2.0&_ntms=1645668173795&_nref=&_nurl=http%3A%2F%2Fdict.youdao.com%2F&_nres=1280x720&_nlmf=1645668173&          _njve=0&_nchr=utf-8&_nfrg=&page=index HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:56 2022
-21: not in cache
-21: Requesting "GET http://ke.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback HTTP/1.1          " from 198.86.29.20 @ Wed Feb 23 21:02:56 2022
-21: Received "HTTP/1.1 200 OK" from 198.86.29.20
-21: Responding "HTTP/1.1 200 OK"
-21: cached, but requires re-validation
-main_1  | 18: not in cache
-main_1  | 18: Requesting "GET http://www.huihui.cn/deals/channel.json?callback=discountCallback HTTP/1.1" from 198.86.          29.20 @ Wed Feb 23 21:02:56 2022
-main_1  | 18: Received "HTTP/1.1 302 Moved Temporarily" from 198.86.29.20
-main_1  | 18: Responding "HTTP/1.1 302 Moved Temporarily"
-main_1  | 18: not cacheable because code 302
-main_1  | 23: "GET http://www.youdao.com/ HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:57 2022
-main_1  | 23: not in cache
-main_1  | 23: Requesting "GET http://www.youdao.com/ HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:02:57 2022
-main_1  | 23: Received "HTTP/1.1 200 OK" from 198.86.29.20
-main_1  | 23: Responding "HTTP/1.1 200 OK"
-main_1  | 23: cached, but requires re-validation
-main_1  | 22: Received "HTTP/1.1 200 OK" from 198.86.29.20
-main_1  | 22: Responding "HTTP/1.1 200 OK"
-main_1  | 22: cached, but requires re-validation
+================================
+post failure error
+================================
+75: "POST http://httpbin.org/post HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:44:15 2022
+75: Requesting "POST http://httpbin.org/post HTTP/1.1" from 0.0.0.0
+75: ERROR POST Failure @ Wed Feb 23 22:45:15 2022
+
+================================
+malformed request error
+================================
+(no-id): ERROR Malformed request from 0.0.0.0 @ Wed Feb 23 22:35:32 2022
+
+================================
+connection error
+================================
+(no-id): ERROR cannot get address info for host (p207-quota.icloud.com, 443)
+(no-id): ERROR client exception
+
 ============
 CONNECT
 ============
-26: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
-27: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
 28: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
-29: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
-30: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
-31: "CONNECT assets.leetcode-cn.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:26 2022
 28: Responding "HTTP/1.1 200 OK"
-26: Responding "HTTP/1.1 200 OK"
-31: Responding "HTTP/1.1 200 OK"
-30: Responding "HTTP/1.1 200 OK"
-29: Responding "HTTP/1.1 200 OK"
-27: Responding "HTTP/1.1 200 OK"
-29: Tunnel closed
 28: Tunnel closed
-29: Tunnel closed
-30: Tunnel closed
-31: Tunnel closed
 32: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
-33: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
-34: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
-35: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
-36: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
-37: "CONNECT api.growingio.com:443 HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:05:32 2022
-36: Responding "HTTP/1.1 200 OK"
-37: Responding "HTTP/1.1 200 OK"
-33: Responding "HTTP/1.1 200 OK"
 32: Responding "HTTP/1.1 200 OK"
-34: Responding "HTTP/1.1 200 OK"
-35: Responding "HTTP/1.1 200 OK"
 32: Tunnel closed
-37: Tunnel closed
-36: Tunnel closed
-33: Tunnel closed
-34: Tunnel closed
-==============
+
+============
 POST
-==============
+============
 4: "POST http://httpbin.org/post HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:21:56 2022
 4: Requesting "POST http://httpbin.org/post HTTP/1.1" from 198.86.29.20
 4: Responding "HTTP/1.1 200 OK"
+
+============
+GET
+============
 ================================
 not cacheable
 ================================
@@ -95,6 +64,16 @@ cached
 50: cached
 
 ================================
+cached, but requires re-validation
+================================
+21: not in cache
+21: "GET http://ke.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback HTTP/1.1" from 198.          86.29.20 @ Wed Feb 23 21:02:55 2022
+21: Requesting "GET http://ke.youdao.com/api/course/list/3/1.jsonp?callback=coursePracticalCallback HTTP/1.1          " from 198.86.29.20 @ Wed Feb 23 21:02:56 2022
+21: Received "HTTP/1.1 200 OK" from 198.86.29.20
+21: Responding "HTTP/1.1 200 OK"
+21: cached, but requires re-validation
+
+================================
 in cache, valid
 ================================
 53: "GET http://www.gov.cn/govweb/xhtml/2016gov/css/common.css HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:41:17 2022
@@ -107,19 +86,23 @@ in cache, requires validation
 80: "GET http://httpbin.org/forms/post HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:46:27 2022
 80: in cache, requires validation
 80: Responding "HTTP/1.1 200 OK"
-==============
+
+============
 chunked
-==============
-"GET http://www.httpwatch.com/favicon.ico HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:23:10 2022
-5: not in cache
-5: Requesting "GET http://www.httpwatch.com/favicon.ico HTTP/1.1" from 198.86.29.20 @ Wed Feb 23 21:23:10 2022
-5: Received "HTTP/1.1 200 OK" from 198.86.29.20
-5: Responding "HTTP/1.1 200 OK"
-5: not cacheable because no-store
-================================
-malformed request error
-================================
-(no-id): ERROR Malformed request from 0.0.0.0 @ Wed Feb 23 22:35:32 2022
+============
+88: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:48:39 2022
+88: not in cache
+88: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:48:39 2022
+88: Received "HTTP/1.1 200 OK" from 0.0.0.0
+88: Responding "HTTP/1.1 200 OK"
+88: not cacheable because no-store
+89: "GET http://www.httpwatch.com/favicon.ico HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:48:43 2022
+89: not in cache
+89: Requesting "GET http://www.httpwatch.com/favicon.ico HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:48:43 2022
+89: Received "HTTP/1.1 200 OK" from 0.0.0.0
+89: Responding "HTTP/1.1 200 OK"
+89: not cacheable because no-store
+
 
 ================================
 play music
@@ -160,18 +143,3 @@ play video
 240: Responding "HTTP/1.1 200 OK"
 241: "CONNECT rr4---sn-q4flrn7r.googlevideo.com:443 HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:54:40 2022
 241: Responding "HTTP/1.1 200 OK"
-
-================================
-post failure error
-================================
-75: "POST http://httpbin.org/post HTTP/1.1" from 0.0.0.0 @ Wed Feb 23 22:44:15 2022
-75: Requesting "POST http://httpbin.org/post HTTP/1.1" from 0.0.0.0
-75: ERROR POST Failure @ Wed Feb 23 22:45:15 2022
-================================
-connection error
-================================
-(no-id): ERROR cannot get address info for host (p207-quota.icloud.com, 443)
-(no-id): ERROR client exception
-
-
-

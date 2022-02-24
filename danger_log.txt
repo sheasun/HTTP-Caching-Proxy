@@ -1,8 +1,8 @@
 1. Met some problems when converting the format of time and date in the response object. In addition, the time difference also should be noticed. We searched many resources on the Internet to learn to parse it. We solved this problem now.
 
-2. The program cannot input the request and response information into the proxy.log properly. We have handled this issue now. 
+2. The program couldn't write the request and response information into the proxy.log properly on docker, and we found out that in fact the file was written to /var/lib/docker/volumes/docker-deploy_data-volume/_data/proxy.log. Following what TA said on Ed, We have handled this issue now. 
 
-3. We found an issue that there would be a limit of the thread number. When the proxy runs a period of time which is long enough, the thread number would over the limitation. Thus, we should find a way to handle this situation. However, the issue is not solved until now.
+3. We found an issue that there would be a limit of the thread number. When the proxy runs a period of time which is long enough, the thread number would over the limitation. Thus, we should find a way to handle this situation. The solution can be reseting the thread number when it's about to overflow, or creating a unique ID for each thread. However, we haven't implemented those solutions until now.
 
 4. In the processGET function, the program should get the information from the cache object, and making decision by it. The logic and code in this function still has some issues. In addition, we still cannot find a method to test this situation.
 
@@ -10,4 +10,5 @@
 
 6. Exception handling: When we were testing our code, we found out that sometimes the proxy couldn’t make a SOCKET connection with the server, and it could cause the program to crash. To solve this problem, we added exception handling to our program. We added ServerException to handle cases when we couldn’t start our proxy using the given hostname and port, and added ClientException to handle cases when the proxy couldn’t connect with the server given the server’s hostname and port. The name ServerException and ClientException means the exception happens when the proxy behaves as a server or a client. So in this way, if the proxy found itself couldn’t connect with the server, it would just drop the current request and move on to the next one, and such situation would no longer lead to program abortion.
 
-We used STL container list to build our LRU cache. We stored key-value pairs in the list, and because list supports both push_front and push_back functions, we could easily realize the LRU policy as long as we push the latest key-value pair to the front of the list. We also used STL container map to support O(1) time lookup, which could improve the cache performace.
+7. Cache: We used STL container list to build our LRU cache. We stored key-value pairs in the list, and because list supports both push_front and push_back functions, we could easily realize the LRU policy as long as we push the latest key-value pair to the front of the list. We also used STL container map to support O(1) time lookup, which could improve the cache performace.
+
